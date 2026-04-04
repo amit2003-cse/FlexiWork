@@ -33,6 +33,7 @@ export const authOptions: NextAuthOptions = {
     },
     async jwt({ token, user, trigger, session }) {
       if (user) {
+        await dbConnect();
         const dbUser = await User.findOne({ email: user.email });
         if (dbUser) {
           token.id = dbUser._id.toString();
