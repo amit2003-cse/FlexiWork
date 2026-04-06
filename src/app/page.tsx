@@ -111,7 +111,7 @@ export default function Home() {
               <p className="text-neutral-400 text-center text-sm mb-8">Secure login with Google to access both seeker and employer dashboards.</p>
               
               <button
-                onClick={() => signIn("google", { callbackUrl: "/profile" })}
+                onClick={() => signIn("google")}
                 className="w-full flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-white text-neutral-900 font-bold hover:bg-neutral-100 hover:scale-[1.02] transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)]"
               >
                 <FcGoogle className="w-6 h-6" />
